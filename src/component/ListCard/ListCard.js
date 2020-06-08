@@ -10,7 +10,7 @@ export default class ListCard extends Component {
         this.state = {
             list: [],
         };
-        this.searchf = this.searchf.bind(this);
+        this.search = this.search.bind(this);
     }
 
     componentDidMount() {
@@ -22,7 +22,7 @@ export default class ListCard extends Component {
         });
     }
 
-    searchf(data) {
+    search(data) {
         if ( this.props.search !== "" && data.props.product_name.toLowerCase().indexOf(this.props.search.toLowerCase()) === -1 ) {
             return null;
         }
@@ -35,7 +35,7 @@ export default class ListCard extends Component {
                 <ListGroup horizontal>
                     {
                         this.state.list.map(data => {
-                        return this.searchf(data)
+                        return this.search(data)
                         })
                     }
                 </ListGroup>

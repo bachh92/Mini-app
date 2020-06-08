@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import ListCard from '../../component/ListCard/ListCard';
+import Badge from 'react-bootstrap/Badge';
+import '../../assets/nav.css';
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -25,10 +28,13 @@ export default class Home extends Component {
             <body>
                 <div>
                     <Navbar  bg="light" expand="lg">
-                    <Navbar.Brand href="/">Shop</Navbar.Brand>
+                    <Navbar.Brand className="Brand" href="/">Shop</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/details">Details</Nav.Link>
+                    <div className="filter">
+                        <a>Prix:</a>
+                        <Button className="button" variant="outline-success"  size="sm">Croissant</Button>
+                        <Button className="button" variant="outline-success"  size="sm">Décroissant</Button>
+                    </div>
                     </Nav>
                     <Form inline>
                         <Form.Control ref={this.textInput} type="text" placeholder="Search" className="mr-sm-2" onChange={this.onChange}/>
