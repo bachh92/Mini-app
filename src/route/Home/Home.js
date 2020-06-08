@@ -23,6 +23,10 @@ export default class Home extends Component {
         });
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <body>
@@ -36,9 +40,9 @@ export default class Home extends Component {
                         <Button className="button" variant="outline-success"  size="sm">Décroissant</Button>
                     </div>
                     </Nav>
-                    <Form inline>
+                    <Form inline onSubmit={this.handleSubmit}>
                         <Form.Control ref={this.textInput} type="text" placeholder="Search" className="mr-sm-2" onChange={this.onChange}/>
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success" >Search</Button>
                     </Form>
                 </Navbar>
                 </div>
