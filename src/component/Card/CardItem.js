@@ -12,10 +12,10 @@ export default class CardItem extends Component {
             id: this.props.id,
             lgShow: false
         }
-        this.Example = this.Example.bind(this);
+        this.ShowItem = this.ShowItem.bind(this);
     }
 
-    Example()  {
+    ShowItem()  {
         return(
         <>
         <Card style={{ width: '18rem' }}>
@@ -49,6 +49,6 @@ export default class CardItem extends Component {
     }
 
     render () {
-        return this.Example();
+        return this.ShowItem();
     }
 };

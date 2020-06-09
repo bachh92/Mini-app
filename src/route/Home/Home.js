@@ -78,8 +78,11 @@ export default class Home extends Component {
         return this.state.list;
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     render() {
-        let button;
         return (
             <body>
                 <div>
@@ -92,7 +95,7 @@ export default class Home extends Component {
                         <Button className="button" variant="outline-success" onClick={() => this.handleDChange()} size="sm">Décroissant</Button>
                     </div>
                     </Nav>
-                    <Form inline>
+                    <Form inline onSubmit={this.handleSubmit}>
                         <Form.Control ref={this.textInput} type="text" placeholder="Search" className="mr-sm-2" onChange={this.onChange}/>
                         <Button variant="outline-success">Search</Button>
                     </Form>
