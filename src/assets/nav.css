@@ -1,5 +1,7 @@
 .filter{
+    position: relative; 
     margin-top: 5px;
+    left: 600%;
 }
 
 .button{
@@ -7,6 +9,9 @@
     margin-bottom: 7px;
 }
 
+.Brand{
+    margin-bottom: 0%;
+}
 
 a{
     align-content: center;
