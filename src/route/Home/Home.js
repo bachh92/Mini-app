@@ -97,7 +97,7 @@ export default class Home extends Component {
                     </Nav>
                     <Form inline onSubmit={this.handleSubmit}>
                         <Form.Control ref={this.textInput} type="text" placeholder="Search" className="mr-sm-2" onChange={this.onChange}/>
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success">Recherche</Button>
                     </Form>
                 </Navbar>
                 </div>
